@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET SESSION</title>
+</head>
+<body>
+    <h1>GET SESSION</h1>
+    
+    <h1>{{firstname}}</h1>
+    <h1>{{lastname}}</h1>
+    <pre><h1>KEYS</h1></pre>
+    <h1>
+       <ul>
+        {% for key in keys %}
+        <li>{{key}}</li>
+    {% endfor %}
+       </ul>
+    </h1>
+    <pre><h2><b>{{request.session.get_session_cookie_age}}</b></h2></pre>
+    <pre><h2><b>{{request.session.get_expiry_date}}</b></h2></pre>
+    <pre><h2><b>{{request.session.get_expire_at_browser_close}}</b></h2></pre>
+    <h4><a href="/delete-session">delete session</a><br></h4>
+    <h4><a href="/">home</a></h4>
+</body>
+</html>
